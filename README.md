@@ -5,7 +5,7 @@ A JavaScript library for logging in and fetching schedules from Czech University
 ## Installation
 
 ```bash
-npm install czu-lib
+npm i czu-lib
 ```
 
 ## Usage
