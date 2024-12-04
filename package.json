@@ -1,0 +1,26 @@
+{
+  "name": "czu-lib",
+  "version": "1.0.0",
+  "description": "A JavaScript library for logging in and fetching schedules from Czech University of Life Sciences Prague's university information system (ČZU UIS).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4k1k01/czu-lib.git"
+  },
+  "keywords": [
+    "czu",
+    "login",
+    "schedule",
+    "api",
+    "lib"
+  ],
+  "author": "akiko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/4k1k01/czu-lib/issues"
+  },
+  "homepage": "https://github.com/4k1k01/czu-lib#readme"
+}
