@@ -10,13 +10,15 @@ async function login(username, password) {
     throw new Error('Missing username or password');
   }
 
-  const url = 'https://is.czu.cz/system/login.pl';
+  const URL = 'https://is.czu.cz/system/login.pl';
 
   const formData = new URLSearchParams({
+    login_hidden:	'1',
     destination: '/auth/',
     credential_0: username,
     credential_1: password,
-    credential_2: '345600',
+    credential_k:	'',
+    credential_2: '86400',
   });
 
   const headers = {
@@ -25,10 +27,11 @@ async function login(username, password) {
   };
 
   try {
-    const response = await client.post(url, formData.toString(), {
+    const response = await client.post(URL, formData.toString(), {
       headers: headers,
-      maxRedirects: 0,
+      maxRedirects: 5,
       validateStatus: (status) => status >= 200 && status < 400,
+      withCredentials: true,
     });
 
     return jar.toJSON();
