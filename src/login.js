@@ -34,7 +34,10 @@ async function login(username, password) {
       withCredentials: true,
     });
 
-    return jar.toJSON();
+
+    const cookieString = jar.toJSON().cookies.map(cookie => `${cookie.key}=${cookie.value}`).join('; ');
+
+    return cookieString;
   } catch (error) {
     console.error('Error:', error.response ? error.response.data : error.message);
   }

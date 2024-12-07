@@ -15,12 +15,10 @@ async function fetchSchedule(cookies, date_from, date_to, lang = 'cz') {
   const BASE_URL = 'https://is.czu.cz/auth';
   let rozvrhStudent = null;
 
-  const cookieString = cookies.cookies.map(cookie => `${cookie.key}=${cookie.value}`).join('; ');
-
   const headers = {
     'Content-Type': 'application/x-www-form-urlencoded',
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
-    'Cookie': cookieString,
+    'Cookie': cookies,
   };
 
   try {
